@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a Clínica Konoha para agendar consulta, esclarecer dúvidas e receber orientação personalizada.">
+    <title>Clínica Konoha | Contato</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="menu" aria-label="Menu principal">
+            <div class="site-brand">
+                <h1>Clínica Konoha</h1>
+                <p>Estamos prontos para agendar sua consulta e esclarecer suas dúvidas.</p>
+            </div>
+
+            <div class="menu-header">
+                <button class="menu-toggle" aria-expanded="true" aria-label="Alternar menu">☰</button>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html"><span class="icon" aria-hidden="true">🌿</span><span class="label">Início</span></a></li>
+                    <li><a href="about.html"><span class="icon" aria-hidden="true">📜</span><span class="label">Sobre</span></a></li>
+                    <li><a href="schedule.html"><span class="icon" aria-hidden="true">🗓️</span><span class="label">Horários</span></a></li>
+                    <li><a href="contact.html" aria-current="page"><span class="icon" aria-hidden="true">✉️</span><span class="label">Contato</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <section class="header-hero">
+                <div>
+                    <span class="highlight">Central de apoio</span>
+                    <h2>Contato</h2>
+                    <p>Fale com a equipe da Clínica Konoha para agendar seu atendimento, esclarecer dúvidas ou receber orientações personalizadas.</p>
+                </div>
+
+                <div class="hero-media">
+                    <img src="midia/96180-naruto-anime-hd-4k-5k-8k-logo.jpg" alt="Naruto com o símbolo da Aldeia da Folha">
+                </div>
+            </section>
+
+            <section class="section-card">
+                <div class="section-title">
+                    <div>
+                        <h3>Informações de contato</h3>
+                        <p>Estamos disponíveis para atender suas necessidades com clareza e segurança.</p>
+                    </div>
+                </div>
+
+                <div class="contact-grid">
+                    <article class="contact-card">
+                        <h3>Atendimento</h3>
+                        <dl>
+                            <div>
+                                <dt>Email</dt>
+                                <dd>contato@clinicakonoha.com</dd>
+                            </div>
+                            <div>
+                                <dt>Telefone</dt>
+                                <dd>(11) 4000-0000</dd>
+                            </div>
+                            <div>
+                                <dt>Endereço</dt>
+                                <dd>Rua da Folha, 125 – Aldeia da Folha, São Paulo</dd>
+                            </div>
+                            <div>
+                                <dt>Horário</dt>
+                                <dd>Segunda a sexta, 08h às 18h</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <form class="form-contact" action="#" method="post">
+                        <div class="form-row">
+                            <label for="name">Nome completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <fieldset>
+                            <legend>Preferência de retorno</legend>
+                            <div class="radio-group">
+                                <label class="radio-inline"><input type="radio" id="email-choice" name="contact-choice" value="email"> Email</label>
+                                <label class="radio-inline"><input type="radio" id="phone-choice" name="contact-choice" value="phone"> Telefone</label>
+                                <label class="radio-inline"><input type="radio" id="whatsapp-choice" name="contact-choice" value="whatsapp"> Whatsapp</label>
+                            </div>
+                        </fieldset>
+                        <div class="form-row">
+                            <label for="day-period">Horário preferido</label>
+                            <select id="day-period" name="day-period" required>
+                                <option value="" hidden>---Selecione aqui---</option>
+                                <option value="morning">Manhã</option>
+                                <option value="afternoon">Tarde</option>
+                                <option value="evening">Noite</option>
+                            </select>
+                        </div>
+                        <div class="checkbox-row">
+                            <label for="check-mailing"><input type="checkbox" id="check-mailing" name="newsletter"> Gostaria de receber novidades por email?</label>
+                        </div>
+                        <button class="button-primary" type="submit">Enviar formulário</button>
+                    </form>
+                </div>
+
+                <div class="map-wrapper">
+                    <iframe title="Localização da Clínica Konoha" src="https://maps.google.com/maps?q=São%20Paulo%2C%20Brasil&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>"Não julgue alguém pela aparência, mas pelo tamanho de seu coração e seus sonhos."</p>
+            </footer>
+        </main>
+    </div>
+    <script>
+    (function(){
+        var btn = document.querySelector('.menu-toggle');
+        var wrapper = document.querySelector('.wrapper');
+        if(!btn || !wrapper) return;
+        btn.addEventListener('click', function(){
+            var collapsed = wrapper.classList.toggle('menu-collapsed');
+            btn.setAttribute('aria-expanded', String(!collapsed));
+            try{ localStorage.setItem('konoha:menuCollapsed', collapsed ? '1' : '0'); }catch(e){}
+        });
+        try{
+            if(localStorage.getItem('konoha:menuCollapsed') === '1'){
+                wrapper.classList.add('menu-collapsed');
+                btn.setAttribute('aria-expanded','false');
+            }
+        }catch(e){}
+    })();
+    </script>
+</body>
+</html>

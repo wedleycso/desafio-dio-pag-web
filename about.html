@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a história, missão e valores da Clínica Konoha com atendimento inspirado na dedicação da Aldeia da Folha.">
+    <title>Clínica Konoha | Sobre a clínica</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="menu" aria-label="Menu principal">
+            <div class="site-brand">
+                <h1>Clínica Konoha</h1>
+                <p>A clínica reúne tradição e atenção moderna para apoiar a saúde da sua comunidade com excelência.</p>
+            </div>
+
+            <div class="menu-header">
+                <button class="menu-toggle" aria-expanded="true" aria-label="Alternar menu">☰</button>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html"><span class="icon" aria-hidden="true">🌿</span><span class="label">Início</span></a></li>
+                    <li><a href="about.html" aria-current="page"><span class="icon" aria-hidden="true">📜</span><span class="label">Sobre</span></a></li>
+                    <li><a href="schedule.html"><span class="icon" aria-hidden="true">🗓️</span><span class="label">Horários</span></a></li>
+                    <li><a href="contact.html"><span class="icon" aria-hidden="true">✉️</span><span class="label">Contato</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <section class="header-hero">
+                <div>
+                    <span class="highlight">Nossa trajetória</span>
+                    <h2>Jornada de cuidado e compromisso</h2>
+                    <p>Desde o primeiro atendimento, a Clínica Konoha inspira confiança com um time dedicado e ambiente acolhedor que respeita a individualidade de cada paciente.</p>
+                </div>
+
+                <div class="hero-media">
+                    <img src="midia/96180-naruto-anime-hd-4k-5k-8k-logo.jpg" alt="Naruto com o símbolo da Aldeia da Folha">
+                </div>
+            </section>
+
+            <section class="section-card">
+                <div class="section-title">
+                    <div>
+                        <h3>O que nos diferencia</h3>
+                        <p>Combinação de experiência clínica, responsabilidade e atendimento humano em cada etapa.</p>
+                    </div>
+                </div>
+
+                <div class="info-grid">
+                    <article class="info-block">
+                        <h4>Missão</h4>
+                        <p>Promover saúde e bem-estar por meio de um atendimento de qualidade, com foco na prevenção e no cuidado contínuo.</p>
+                    </article>
+                    <article class="info-block">
+                        <h4>Visão</h4>
+                        <p>Ser referência de confiança na região, reconhecida por um atendimento acolhedor e resultados consistentes.</p>
+                    </article>
+                    <article class="info-block">
+                        <h4>Valores</h4>
+                        <p>Ética, respeito, empatia e inovação orientam nossa rotina clínica e nossa relação com cada paciente.</p>
+                    </article>
+                    <article class="info-block">
+                        <h4>Compromisso</h4>
+                        <p>Manter altos padrões de atendimento e oferecer serviços claros, seguros e alinhados às necessidades do paciente.</p>
+                    </article>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>"A verdadeira qualidade de um shinobi não está no número de jutsus ou na quantidade de talento que ele possui; o importante é a determinação de nunca desistir."</p>
+            </footer>
+        </main>
+    </div>
+    <script>
+    (function(){
+        var btn = document.querySelector('.menu-toggle');
+        var wrapper = document.querySelector('.wrapper');
+        if(!btn || !wrapper) return;
+        btn.addEventListener('click', function(){
+            var collapsed = wrapper.classList.toggle('menu-collapsed');
+            btn.setAttribute('aria-expanded', String(!collapsed));
+            try{ localStorage.setItem('konoha:menuCollapsed', collapsed ? '1' : '0'); }catch(e){}
+        });
+        try{
+            if(localStorage.getItem('konoha:menuCollapsed') === '1'){
+                wrapper.classList.add('menu-collapsed');
+                btn.setAttribute('aria-expanded','false');
+            }
+        }catch(e){}
+    })();
+    </script>
+</body>
+</html>

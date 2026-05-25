@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica Konoha oferece atendimento humanizado e moderno com inspiração na força da Aldeia da Folha.">
+    <title>Clínica Konoha | Página principal</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="menu" aria-label="Menu principal">
+            <div class="site-brand">
+                <h1>Clínica Konoha</h1>
+                <p>Atendimento humanizado com foco em resultados, conforto e segurança para pacientes de todas as idades.</p>
+            </div>
+
+            <div class="menu-header">
+                <button class="menu-toggle" aria-expanded="true" aria-label="Alternar menu">☰</button>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" aria-current="page"><span class="icon" aria-hidden="true">🌿</span><span class="label">Início</span></a></li>
+                    <li><a href="about.html"><span class="icon" aria-hidden="true">📜</span><span class="label">Sobre</span></a></li>
+                    <li><a href="schedule.html"><span class="icon" aria-hidden="true">🗓️</span><span class="label">Horários</span></a></li>
+                    <li><a href="contact.html"><span class="icon" aria-hidden="true">✉️</span><span class="label">Contato</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <section class="header-hero">
+                <div>
+                    <span class="highlight">Saúde com espírito ninja</span>
+                    <h2>Bem-vindo à Clínica Konoha</h2>
+                    <p>Na Clínica Konoha, unimos tradição, cuidado e disciplina para oferecer a cada paciente atendimento seguro, humano e orientado para resultados reais.</p>
+                    <a class="button-primary" href="contact.html">Agendar consulta</a>
+                </div>
+
+                <div class="hero-media">
+                    <img src="midia/96180-naruto-anime-hd-4k-5k-8k-logo.jpg" alt="Naruto com o símbolo da Aldeia da Folha">
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <h4>Equipe experiente</h4>
+                        <p>Profissionais qualificados em várias especialidades trabalhando com foco em segurança e orientação personalizada.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h4>Atendimento completo</h4>
+                        <p>Consultas, exames e acompanhamento preparados para oferecer mais conforto e agilidade ao paciente.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h4>Foco no paciente</h4>
+                        <p>Atendimento humanizado que valoriza escuta ativa, orientação clara e soluções reais para cada necessidade.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-card">
+                <div class="section-title">
+                    <div>
+                        <h3>Nossos diferenciais</h3>
+                        <p>Uma experiência moderna e acolhedora para quem busca segurança e conforto em saúde.</p>
+                    </div>
+                </div>
+
+                <div class="info-grid">
+                    <article class="info-block">
+                        <h4>Infraestrutura acolhedora</h4>
+                        <p>Ambientes planejados para tornar cada visita mais tranquila, com salas organizadas e atendimento ágil.</p>
+                    </article>
+                    <article class="info-block">
+                        <h4>Controle de qualidade</h4>
+                        <p>Práticas alinhadas às melhores referências de atendimento, com foco em resultados confiáveis e comunicação transparente.</p>
+                    </article>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>"Lar é onde tem alguém sempre pensando em você."</p>
+            </footer>
+        </main>
+    </div>
+    <script>
+    (function(){
+        var btn = document.querySelector('.menu-toggle');
+        var wrapper = document.querySelector('.wrapper');
+        if(!btn || !wrapper) return;
+        btn.addEventListener('click', function(){
+            var collapsed = wrapper.classList.toggle('menu-collapsed');
+            btn.setAttribute('aria-expanded', String(!collapsed));
+            try{ localStorage.setItem('konoha:menuCollapsed', collapsed ? '1' : '0'); }catch(e){}
+        });
+        try{
+            if(localStorage.getItem('konoha:menuCollapsed') === '1'){
+                wrapper.classList.add('menu-collapsed');
+                btn.setAttribute('aria-expanded','false');
+            }
+        }catch(e){}
+    })();
+    </script>
+</body>
+</html>

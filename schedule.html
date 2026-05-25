@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Veja os horários de atendimento da Clínica Konoha e escolha a melhor data para sua consulta.">
+    <title>Clínica Konoha | Horário de atendimento</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="menu" aria-label="Menu principal">
+            <div class="site-brand">
+                <h1>Clínica Konoha</h1>
+                <p>Confira os horários e agendas disponíveis para cada especialidade.</p>
+            </div>
+            <div class="menu-header">
+                <button class="menu-toggle" aria-expanded="true" aria-label="Alternar menu">☰</button>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html"><span class="icon" aria-hidden="true">🌿</span><span class="label">Início</span></a></li>
+                    <li><a href="about.html"><span class="icon" aria-hidden="true">📜</span><span class="label">Sobre</span></a></li>
+                    <li><a href="schedule.html" aria-current="page"><span class="icon" aria-hidden="true">🗓️</span><span class="label">Horários</span></a></li>
+                    <li><a href="contact.html"><span class="icon" aria-hidden="true">✉️</span><span class="label">Contato</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <section class="header-hero">
+                <div>
+                    <span class="highlight">Missão diária</span>
+                    <h2>Horário de atendimento</h2>
+                    <p>Reserve seu horário com clareza e confiança: nossa agenda oferece flexibilidade e foco nas principais especialidades.</p>
+                </div>
+
+                <div class="hero-media">
+                    <img src="midia/96180-naruto-anime-hd-4k-5k-8k-logo.jpg" alt="Naruto com o símbolo da Aldeia da Folha">
+                </div>
+            </section>
+
+            <section class="section-card">
+                <div class="section-title">
+                    <div>
+                        <h3>Quadro de especialidades</h3>
+                        <p>Planos sem surpresa e horários claros para você escolher o melhor momento.</p>
+                    </div>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Horário</th>
+                                <th>Segunda</th>
+                                <th>Terça</th>
+                                <th>Quarta</th>
+                                <th>Quinta</th>
+                                <th>Sexta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>08:00 às 08:50</td>
+                                <td>Cardiologia</td>
+                                <td>Clínico Geral</td>
+                                <td>Dermatologia</td>
+                                <td>Oftalmologia</td>
+                                <td>Psiquiatria</td>
+                            </tr>
+                            <tr>
+                                <td>09:00 às 09:50</td>
+                                <td>Endocrinologia</td>
+                                <td>Fisioterapia</td>
+                                <td>Dermatologia</td>
+                                <td>Angiologia</td>
+                                <td>Andrologia</td>
+                            </tr>
+                            <tr>
+                                <td>10:15 às 11:05</td>
+                                <td>Fonoaudiologia</td>
+                                <td>Hematologia</td>
+                                <td>Dermatologia</td>
+                                <td>Infectologia</td>
+                                <td>Neurologia</td>
+                            </tr>
+                            <tr>
+                                <td>11:00 às 11:45</td>
+                                <td>Nefrologia</td>
+                                <td>Nutrição</td>
+                                <td>Dermatologia</td>
+                                <td>Ortopedia</td>
+                                <td>Pediatria</td>
+                            </tr>
+                            <tr>
+                                <td>13:15 às 14:05</td>
+                                <td>Pneumologia</td>
+                                <td>Psicologia</td>
+                                <td>Pediatria</td>
+                                <td>Reumatologia</td>
+                                <td>Obstetrícia</td>
+                            </tr>
+                            <tr>
+                                <td>14:15 às 15:05</td>
+                                <td>Cardiologia</td>
+                                <td>Dermatologia</td>
+                                <td>Pediatria</td>
+                                <td>Clínico Geral</td>
+                                <td>Pediatria</td>
+                            </tr>
+                            <tr>
+                                <td>15:15 às 16:05</td>
+                                <td>Clínico Geral</td>
+                                <td>Fisioterapia</td>
+                                <td>Pediatria</td>
+                                <td>Psiquiatria</td>
+                                <td>Fonoaudiologia</td>
+                            </tr>
+                            <tr>
+                                <td>16:15 às 17:05</td>
+                                <td>Clínico Geral</td>
+                                <td>Hematologia</td>
+                                <td>Pediatria</td>
+                                <td>Nutrição</td>
+                                <td>Nutrição</td>
+                            </tr>
+                            <tr>
+                                <td>17:15 às 18:05</td>
+                                <td>Clínico Geral</td>
+                                <td>Ortopedia</td>
+                                <td>Pediatria</td>
+                                <td>Nefrologia</td>
+                                <td>Pediatria</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>"Se você se concentrar em algo, poderá fazer qualquer coisa."</p>
+            </footer>
+        </main>
+    </div>
+    <script>
+    (function(){
+        var btn = document.querySelector('.menu-toggle');
+        var wrapper = document.querySelector('.wrapper');
+        if(!btn || !wrapper) return;
+        btn.addEventListener('click', function(){
+            var collapsed = wrapper.classList.toggle('menu-collapsed');
+            btn.setAttribute('aria-expanded', String(!collapsed));
+            try{ localStorage.setItem('konoha:menuCollapsed', collapsed ? '1' : '0'); }catch(e){}
+        });
+        try{
+            if(localStorage.getItem('konoha:menuCollapsed') === '1'){
+                wrapper.classList.add('menu-collapsed');
+                btn.setAttribute('aria-expanded','false');
+            }
+        }catch(e){}
+    })();
+    </script>
+</body>
+</html>
