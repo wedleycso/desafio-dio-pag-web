@@ -40,5 +40,3 @@ O que foi melhorado:
 - Menu colapsável com persistência de estado entre visitas.
 - Metadados `description` adicionados nas páginas para SEO básico.
 - Herói com imagem temática e refinamentos de estilo em `base.css`.
-
-Se quiser, eu posso gerar capturas das páginas ou empacotar o site em um arquivo `.zip` para distribuição.
